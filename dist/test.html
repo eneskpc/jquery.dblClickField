@@ -6,13 +6,20 @@
     <link rel="stylesheet" href="jquery.dblClickField.css"/>
 </head>
 <body>
-    <p id="edit-element">Test</p>
+    <p id="edit-element-1">Test-1</p>
+    <h1 id="edit-element-2">Test-2</h1>
 <script src="jquery.min.js"></script>
 <script src="autosize.min.js"></script>
 <script src="jquery.dblClickField.js"></script>
 <script>
-    $(document).ready(function(){
-        $('#edit-element').dblClickField();
+    $(document).ready(function () {
+        $('#edit-element-1').dblClickField();
+        $('#edit-element-2').dblClickField({
+            ajax: {
+                url: 'samples/dblClickField.sample.php',
+                method: 'POST' /*The request is using the POST method. You can use the GET method. */
+            }
+        });
     });
 </script>
 </body>

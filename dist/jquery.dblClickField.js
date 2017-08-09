@@ -1,13 +1,10 @@
 /*!
- * 
  * jquery.dblClickField v1.0
  * https://github.com/eneskpc/jquery.dblClickField
- * 
  */
-
 (function ($) {
     "use strict";
-    $.fn.dblClickField = function () {
+    $.fn.dblClickField = function (param) {
         var thisField = $(this);
         thisField.after('<textarea class="dcf-editArea"></textarea>');
         var textFieldNext = thisField.next('textarea.dcf-editArea');
@@ -25,9 +22,27 @@
         });
         textFieldNext.keypress(function (event) {
             if (event.which == 13) {
-                thisField.text(textFieldNext.val());
-                thisField.show();
-                textFieldNext.hide();
+                if (!$.isEmptyObject(param) && !$.isEmptyObject(param.ajax)) {
+                    var name = (!$.isEmptyObject(thisField.attr('id')) ? thisField.attr('id') : 'dcf1');
+                    $.ajax({
+                        url: param.ajax.url,
+                        method: param.ajax.method,
+                        data: textFieldNext.attr('name', name).serializeArray()
+                    }).done(function (response) {
+                        var r = $.parseJSON(response);
+                        if (r.success) {
+                            thisField.text(textFieldNext.val());
+                            thisField.show();
+                            textFieldNext.hide();
+                        } else {
+                            alert("Update Successful!");
+                        }
+                    });
+                } else {
+                    thisField.text(textFieldNext.val());
+                    thisField.show();
+                    textFieldNext.hide();
+                }
             }
         });
     }
