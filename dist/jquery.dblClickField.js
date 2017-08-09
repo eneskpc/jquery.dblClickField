@@ -22,11 +22,11 @@
         });
         textFieldNext.keypress(function (event) {
             if (event.which == 13) {
-                if (!$.isEmptyObject(param) && !$.isEmptyObject(param.ajax)) {
+                if (!$.isEmptyObject(param) && !$.isEmptyObject(param.send)) {
                     var name = (!$.isEmptyObject(thisField.attr('id')) ? thisField.attr('id') : 'dcf1');
                     $.ajax({
-                        url: param.ajax.url,
-                        method: param.ajax.method,
+                        url: param.send.url,
+                        method: param.send.method,
                         data: textFieldNext.attr('name', name).serializeArray()
                     }).done(function (response) {
                         var r = $.parseJSON(response);
