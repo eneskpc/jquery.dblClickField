@@ -23,7 +23,7 @@
         textFieldNext.keypress(function (event) {
             if (event.which == 13) {
                 if (!$.isEmptyObject(param) && !$.isEmptyObject(param.send)) {
-                    var name = (!$.isEmptyObject(thisField.attr('id')) ? thisField.attr('id') : 'dcf1');
+                    var name = (!$.isEmptyObject(thisField.attr('sname')) ? thisField.attr('sname') : 'dcf1');
                     $.ajax({
                         url: param.send.url,
                         method: param.send.method,
