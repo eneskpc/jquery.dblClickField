@@ -37,7 +37,7 @@
                             thisField.show();
                             textFieldNext.hide();
                         } else {
-                            alert("Update Successful!");
+                            alert(r.errorMessage);
                         }
                     });
                 } else {
