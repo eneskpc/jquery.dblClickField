@@ -1,5 +1,5 @@
 /*!
- * jquery.dblClickField v1.0
+ * jquery.dblClickField v1.0.1
  * https://github.com/eneskpc/jquery.dblClickField
  */
 (function ($) {
