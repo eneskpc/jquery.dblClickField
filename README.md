@@ -19,8 +19,8 @@ $(document).ready(function(){
 ### What else this?
 
 When you press Enter, you can send the data to another page!<br>
-For this, first you must add to an attribute to the element you selected (sname).<br>
-With this feature you can get data from another page
+For this, first you must add to an attribute to the element you selected. This attribute is `sname`.<br>
+With this feature you can get data from another page.
 ```html
 <h1 id="edit-element-2" sname="e2">Edit Element 2</h1>
 ```
