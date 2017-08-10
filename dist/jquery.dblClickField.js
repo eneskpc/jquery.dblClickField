@@ -23,6 +23,7 @@
         });
         textFieldNext.keypress(function (event) {
             if (event.which == 13) {
+                event.preventDefault();
                 if (!$.isEmptyObject(param) && !$.isEmptyObject(param.send)) {
                     var name = (!$.isEmptyObject(thisField.attr('sname')) ? thisField.attr('sname') : 'dcf1');
                     $.ajax({
