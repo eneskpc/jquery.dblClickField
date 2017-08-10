@@ -11,6 +11,7 @@
         textFieldNext.css({
             'font-family': thisField.css('font-family'),
             'font-size': thisField.css('font-size'),
+            'text-align': thisField.css('text-align'),
             'font-weight': 700
         });
         autosize(textFieldNext);
