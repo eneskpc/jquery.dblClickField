@@ -2,7 +2,7 @@
 This project allows you to edit html element with double click.
 
 ## Why I prepared this jQuery Plugin
-Because, I had to use this plugin for Private Project.
+Because, I had to use this plugin for Private Project.<br>
 I created a reference for myself and I wanted to be a source for you.
 
 ### How to use this plugin?
@@ -18,8 +18,8 @@ $(document).ready(function(){
 ```
 ### What else this?
 
-When you press Enter, you can send the data to another page!
-For this, first you must add to an attribute to the element you selected.(sname)
+When you press Enter, you can send the data to another page!<br>
+For this, first you must add to an attribute to the element you selected.(sname)<br>
 With this feature you can get data from another page
 ```html
 <h1 id="edit-element-2" sname="e2">Edit Element 2</h1>
