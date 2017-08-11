@@ -36,4 +36,3 @@ $(document).ready(function () {
     });
 });
 ```
-Currently, Does not supported `jQuery 1.x.x`
