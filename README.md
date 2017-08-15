@@ -1,6 +1,6 @@
 # jQuery DoubleClickField v1.0.1
 This project allows you to edit html element with double click.
-[Click This Demo]: https://eneskpc.github.io/jquery.dblClickField/dist/test.html
+[Click This Demo](https://eneskpc.github.io/jquery.dblClickField/dist/test.html)
 
 ## Why I prepared this jQuery Plugin
 Because, I had to use this plugin for Private Project.<br>
