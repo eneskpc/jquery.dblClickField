@@ -8,16 +8,19 @@
 <body>
     <p id="edit-element-1">Edit Element 1</p>
     <h1 id="edit-element-2" sname="e2">Edit Element 2</h1>
+    <table border="1">
+        <tr>
+            <td>Name Surname</td>
+            <td id="edit-element-3">John Doe</td>
+        </tr>
+    </table>
 <script src="jquery.min.js"></script>
 <script src="autosize.min.js"></script>
 <script src="jquery.dblClickField.js"></script>
 <script>
     $(document).ready(function () {
-        $('#edit-element-1').dblClickField({
-            onEditMode: function (text) {
-                alert(text.split(" ")[0]);
-            }
-        });
+        $('#edit-element-1').dblClickField();
+        
         $('#edit-element-2').dblClickField({
             send: {
                 url: 'samples/dblClickField.sample.php',
@@ -25,6 +28,12 @@
             },
             onChanged: function (text) {
                 alert(text);
+            }
+        });
+        
+        $('#edit-element-3').dblClickField({
+            onEditMode: function (text) {
+                alert(text.split(" ")[0]);
             }
         });
     });
