@@ -5,7 +5,7 @@ This project allows you to edit html element with double click.
 Because, I had to use this plugin for Private Project.<br>
 I created a reference for myself and I wanted to be a source for you.
 
-### How to use this plugin?
+## How to use this plugin?
 This is very simple! First select HTML tag to you use (except input element) :
 ```html
 <h1 id="edit-element-1">Editable Element 1</h1>
@@ -16,13 +16,13 @@ $(document).ready(function(){
     $('#edit-element-1').dblClickField();
 });
 ```
-### What else this?
+## What else this?
 
-#### When you press Enter, you can send the data to another page!<br>
+### When you press Enter, you can send the data to another page!
 For this, first you must add to an attribute to the element you selected. This attribute is `sname`.<br>
 With this feature you can get data from another page.
 ```html
-<h1 id="edit-element-2" sname="e2">Editable Element 2</h1>
+<h1 id="edit-element-2" `sname`="e2">Editable Element 2</h1>
 ```
 You need to submit an object parameter for JavaScript.<br>
 You must define url and method variables within this object.
@@ -36,3 +36,5 @@ $(document).ready(function () {
     });
 });
 ```
+### This plugin has a few Events
+
