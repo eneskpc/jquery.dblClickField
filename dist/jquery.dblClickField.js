@@ -6,7 +6,7 @@
     "use strict";
     $.fn.extend({
         dblClickField: function (param) {
-            this.each(function () {
+            return this.each(function () {
                 var thisField = $(this);
                 thisField.after('<textarea class="dcf-editArea"></textarea>');
                 var textFieldNext = thisField.next('textarea.dcf-editArea');
@@ -22,7 +22,7 @@
                     textFieldNext.focus();
                     textFieldNext.val(thisField.text());
                     thisField.hide();
-                    if (typeof param.onEditMode === "function") {
+                    if (!$.isEmptyObject(param) && typeof param.onEditMode === "function") {
                         param.onEditMode(textFieldNext.val());
                     }
                 });
@@ -51,7 +51,7 @@
                             thisField.show();
                             textFieldNext.hide();
                         }
-                        if (typeof param.onChanged === "function") {
+                        if (!$.isEmptyObject(param) && typeof param.onChanged === "function") {
                             param.onChanged(textFieldNext.val());
                         }
                     }
