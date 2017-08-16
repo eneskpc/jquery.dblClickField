@@ -27,13 +27,13 @@
                 method: 'POST' /*The request is using the POST method. You can use the GET method. */
             },
             onChanged: function (object) {
-                alert(object.attr('sname'));
+                alert(object.attr('name'));
             }
         });
         
         $('#edit-element-3').dblClickField({
             onEditMode: function (object) {
-                alert(object.text().split(" ")[0]);
+                alert(object.val().split(" ")[0]);
             }
         });
     });
