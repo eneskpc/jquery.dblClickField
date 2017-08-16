@@ -26,14 +26,14 @@
                 url: 'samples/dblClickField.sample.php',
                 method: 'POST' /*The request is using the POST method. You can use the GET method. */
             },
-            onChanged: function (text) {
-                alert(text);
+            onChanged: function (object) {
+                alert(object.attr('sname'));
             }
         });
         
         $('#edit-element-3').dblClickField({
-            onEditMode: function (text) {
-                alert(text.split(" ")[0]);
+            onEditMode: function (object) {
+                alert(object.text().split(" ")[0]);
             }
         });
     });

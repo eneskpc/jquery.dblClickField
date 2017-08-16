@@ -23,7 +23,7 @@
                     textFieldNext.val(thisField.text());
                     thisField.hide();
                     if (!$.isEmptyObject(param) && typeof param.onEditMode === "function") {
-                        param.onEditMode(textFieldNext.val());
+                        param.onEditMode(thisField);
                     }
                 });
                 textFieldNext.keypress(function (event) {
@@ -52,7 +52,7 @@
                             textFieldNext.hide();
                         }
                         if (!$.isEmptyObject(param) && typeof param.onChanged === "function") {
-                            param.onChanged(textFieldNext.val());
+                            param.onChanged(thisField);
                         }
                     }
                 });
