@@ -42,8 +42,8 @@ For above examples, you can add the "onChange" or "onEditMode" functions on the 
 ```javascript
 $(document).ready(function () {
     $('#edit-element-1').dblClickField({
-        onEditMode: function (text) {
-            alert(text.split(" ")[0]);
+        onEditMode: function (object) {
+            alert(object.val().split(" ")[0]);
         }
     });
     $('#edit-element-2').dblClickField({
@@ -51,8 +51,8 @@ $(document).ready(function () {
             url: 'samples/dblClickField.sample.php',
             method: 'POST' /*The request is using the POST method. You can use the GET method. */
         },
-        onChanged: function (text) {
-            alert(text);
+        onChanged: function (object) {
+            alert(object.val());
         }
     });
 });
