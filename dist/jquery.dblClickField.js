@@ -45,14 +45,17 @@
                                 } else {
                                     alert(r.errorMessage);
                                 }
+                                if (!$.isEmptyObject(param) && typeof param.onChanged === "function") {
+                                    param.onChanged(textFieldNext);
+                                }
                             });
                         } else {
                             thisField.text(textFieldNext.val());
                             thisField.show();
                             textFieldNext.hide();
-                        }
-                        if (!$.isEmptyObject(param) && typeof param.onChanged === "function") {
-                            param.onChanged(textFieldNext);
+                            if (!$.isEmptyObject(param) && typeof param.onChanged === "function") {
+                                param.onChanged(textFieldNext);
+                            }
                         }
                     }
                 });
